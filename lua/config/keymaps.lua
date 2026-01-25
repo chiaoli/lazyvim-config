@@ -8,3 +8,7 @@ vim.keymap.set("v", "<leader>/", "gc", { remap = true, desc = "Toggle Comment" }
 
 -- Save file with <leader>w
 vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "Save File" })
+
+-- Visual mode line movement
+vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move selected lines down" })
+vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up" })
