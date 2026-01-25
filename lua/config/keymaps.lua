@@ -5,3 +5,6 @@
 -- Toggle comment with <leader>/
 vim.keymap.set("n", "<leader>/", "gcc", { remap = true, desc = "Toggle Comment" })
 vim.keymap.set("v", "<leader>/", "gc", { remap = true, desc = "Toggle Comment" })
+
+-- Save file with <leader>w
+vim.keymap.set("n", "<leader>w", "<cmd>w<cr>", { desc = "Save File" })
