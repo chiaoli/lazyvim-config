@@ -17,3 +17,18 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move selected lines up" }
 vim.keymap.set({ "n", "t" }, "<C-\\>", function()
   Snacks.terminal.toggle()
 end, { desc = "Toggle Terminal" })
+
+-- ============================================================================
+-- Buffer Navigation (Buffer 管理) - <leader>b 系列
+-- ============================================================================
+
+-- <leader>bb: 切換到上一個 buffer (back/previous)
+vim.keymap.set("n", "<leader>bb", "<cmd>bprevious<cr>", { desc = "Previous Buffer" })
+
+-- <leader>bn: 切換到下一個 buffer (next)
+vim.keymap.set("n", "<leader>bn", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+
+-- <leader>bj: 跳到特定 buffer (jump，使用 Snacks picker)
+vim.keymap.set("n", "<leader>bj", function()
+  Snacks.picker.buffers()
+end, { desc = "Jump to Buffer" })
