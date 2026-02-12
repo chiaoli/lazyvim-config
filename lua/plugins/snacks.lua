@@ -17,6 +17,9 @@ return {
           files = {
             hidden = true, -- 搜尋時包含隱藏檔案
           },
+          grep = {
+            hidden = true, -- grep 時包含隱藏檔案
+          },
           explorer = {
             hidden = true, -- Explorer 顯示隱藏檔案
           },
